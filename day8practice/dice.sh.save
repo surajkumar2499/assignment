@@ -1,0 +1,19 @@
+#!/bin/bash
+data=()
+start=0
+press_enter()
+{
+    echo -en "\nPress Enter to resuffle : "
+    read
+    clear
+}
+
+election=
+until [ "$selection" = "0" ]; do
+    roll=$((RANDOM%6+1))
+	echo $roll
+	data+=($roll)
+    press_enter
+done
+
+
